@@ -33,15 +33,6 @@ const employeeSchema = new mongoose.Schema({
   },
 
 });
-
+const mongooseModel = mongoose.model('Employee', employeeSchema);
 module.exports = mongoose.model('Employee', employeeSchema);
 
-const employee = {
-    FirstName: 'John',
-    LastName: 'Doe',
-    availability: ['Monday', 'Wednesday', 'Friday'],
-    certifications: ['First Aid', 'CPR'],
-    email: 'john.doe@example.com',
-    PhoneNumber: '123-456-7890',
-    dateJoined: 1780934326185
-}

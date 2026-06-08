@@ -11,4 +11,9 @@ router.post('/', async (req, res) => {
   
 });
 
+router.get('/', async (req, res) => {
+    const allEmployees = await Employee.find();
+    res.json(allEmployees);
+});
+
 module.exports = router;
