@@ -15,6 +15,8 @@ app.get('/', (req, res) => {
   res.json({ message: 'Employee API is running...' });
 });
 
+app.use('/employees', employeeRoutes);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
