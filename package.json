@@ -1,22 +1,23 @@
 {
-  "name": "mongoose_project",
+  "name": "mongoose-practice-1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Practice project for Express + Mongoose + MongoDB Atlas",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.js",
-    "seed": "node src/scripts/seedEmployees.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seedEmployees.js",
+    "test": "echo \"No tests configured yet\""
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongodb": "^7.2.0",
     "mongoose": "^9.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

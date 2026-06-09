@@ -1,24 +1,23 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const express = require('express');
-const connectDB = require('./config/db');
-const employeeRoutes = require('./routes/employees');
-const app = express();
+const express = require('express')
+const connectDB = require('./config/db')
+const employeeRoutes = require('./routes/employees')
 
-// Connect to MongoDB
-connectDB();
+const app = express()
 
-app.use(express.json());
+connectDB()
 
-// Define routes
-app.get('/', (req, res) => {
-  res.json({ message: 'Employee API is running...' });
-});
+app.use(express.json())
 
-app.use('/employees', employeeRoutes);
+app.get('/', (_req, res) => {
+	res.json({ message: 'Employee API is running' })
+})
 
-const PORT = process.env.PORT || 3000;
+app.use('/employees', employeeRoutes)
+
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+	console.log(`Server running on port ${PORT}`)
+})
