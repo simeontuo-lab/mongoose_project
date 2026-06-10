@@ -5,6 +5,7 @@ const Employee = require('../models/Employee')
 const employeesToSeed = require('./seedData.json')
 
 const runSeed = async () => {
+	console.log("process.env.MONGODB_URI:", process.env.MONGODB_URI)
 	try {
 		await mongoose.connect(process.env.MONGODB_URI)
 		await Employee.deleteMany({})
